@@ -1,0 +1,40 @@
+:root {
+  /* ===== 主题色 ===== */
+  --color-primary: #1677ff;
+  --color-primary-hover: #4096ff;
+  --color-primary-light: #e6f4ff;
+  --color-danger: #ff4d4f;
+  --color-danger-hover: #ff7875;
+  --color-text: #333333;
+  --color-border: #d9d9d9;
+  --color-bg-white: #ffffff;
+
+  /* ===== 尺寸 ===== */
+  --height-sm: 28px;
+  --height-md: 36px;
+  --height-lg: 44px;
+  --font-sm: 13px;
+  --font-md: 14px;
+  --font-lg: 16px;
+
+  /* ===== 圆角 / 间距 ===== */
+  --radius-base: 6px;
+  --gap-base: 6px;
+}
+
+/* 深色主题 */
+html.dark {
+  --color-primary: #4096ff;
+  --color-primary-hover: #69b1ff;
+  --color-primary-light: #111a2c;
+  --color-danger: #ff7875;
+  --color-danger-hover: #ffa39e;
+  --color-text: #ffffff;
+  --color-border: #434343;
+  --color-bg-white: #1f1f1f;
+}
+html.light {
+  --color-primary: #1677ff;
+  --color-bg: #ffffff;
+  --color-text: #333333;
+}

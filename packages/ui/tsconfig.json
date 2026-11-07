@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "composite": true,
+    "rootDir": "../.."
+  },
+  "include": [
+    "../../vite.env.d.ts",
+    "src/**/*",
+    "../utils/src/**/*",
+    "../tokens/src/**/*",
+    "../hooks/src/**/*"
+  ]
+}

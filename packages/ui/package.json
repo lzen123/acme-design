@@ -1,0 +1,63 @@
+{
+  "name": "@acme/ui",
+  "version": "0.0.1",
+  "private": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "development": "./src/index.ts",
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./button": {
+      "import": {
+        "development": "./src/components/button/index.ts",
+        "types": "./dist/button.d.mts",
+        "default": "./dist/button.mjs"
+      },
+      "require": {
+        "types": "./dist/button.d.ts",
+        "default": "./dist/button.js"
+      }
+    },
+    "./dist/style.css": "./dist/index.css",
+    "./style.css": {
+      "development": "./src/styles/empty.css",
+      "default": "./dist/index.css"
+    }
+  },
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "@acme/utils": "workspace:*",
+    "@acme/tokens": "workspace:*",
+    "@acme/hooks": "workspace:*"
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "esbuild-sass-plugin": "^3.7.0",
+    "tsup": "^8.3.5",
+    "vitest": "^2.1.6",
+    "@testing-library/react": "^16.0.1"
+  }
+}

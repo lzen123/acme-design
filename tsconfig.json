@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM"],
+    "types": ["react"],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@acme/utils": ["./packages/utils/src/index.ts"],
+      "@acme/tokens": ["./packages/tokens/src/index.ts"],
+      "@acme/hooks": ["./packages/hooks/src/index.ts"],
+      "@acme/ui": ["./packages/ui/src/index.ts"],
+      "@acme/ui/button": ["./packages/ui/src/components/button/index.ts"]
+    }
+  },
+  "references": [
+    { "path": "./packages/utils" },
+    { "path": "./packages/tokens" },
+    { "path": "./packages/hooks" },
+    { "path": "./packages/ui" }
+  ],
+  "include": ["./packages/*/src/**/*", ".storybook/**/*", "vite.env.d.ts"]
+}
