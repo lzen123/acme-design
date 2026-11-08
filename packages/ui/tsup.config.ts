@@ -24,6 +24,7 @@ const EXTERNALS = [
   'react/jsx-runtime',
   // 子路径写法也要单独列出，否则 esbuild 仍可能把它们打进去
   'react/jsx-dev-runtime',
+  '@acme/utils',
 ];
 
 export default defineConfig(options => {
